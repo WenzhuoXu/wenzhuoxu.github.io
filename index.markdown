@@ -16,3 +16,6 @@ I am a PhD student in the [Department of Mechanical Engineering](https://www.mec
 * Ph.D. in Mechanical Engineering, Carnegie Mellon University, 2022 - present
 * B.Eng. in Mechanical Engineering, Shanghai Jiao Tong University, 2018 - 2022
 * B.A. in German, Shanghai Jiao Tong University, 2018 - 2022
+
+## Publications
+* **Wenzhuo Xu**, Noelia Grande Gutierrez, and Christopher McComb. "MegaFlow2D: A Parametric Dataset for Machine Learning Super-resolution in Computational Fluid Dynamics Simulations." In Proceedings of Cyber-Physical Systems and Internet of Things Week 2023 (CPS-IoT Week '23). [[ACM]](https://dl.acm.org/doi/abs/10.1145/3576914.3587552)
