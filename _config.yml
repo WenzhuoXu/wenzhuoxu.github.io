@@ -9,7 +9,6 @@ baseurl: ""
 url: "http://wenzhuoxu.com" 
 
 # Social profiles
-twitter_username: xuwenzhuo46
 github_username: WenzhuoXu
 
 # Theme settings
@@ -51,9 +50,9 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/wenzhuo-xu-174592110/"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/xuwenzhuo46"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=3RqGjxwAAAAJ&hl=en&oi=ao"
 
 # Navigation links
 defaults:
@@ -85,3 +84,6 @@ footer:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/wenzhuo-xu-174592110/"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=3RqGjxwAAAAJ&hl=en&oi=ao"
