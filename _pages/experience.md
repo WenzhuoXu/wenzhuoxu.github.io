@@ -5,29 +5,36 @@ permalink: /experience/
 author_profile: true
 ---
 
-## Teaching Experience
+## Academic Experience
 
-### Carnegie Mellon University
-- **Graduate Teaching Assistant**, Department of Mechanical Engineering (2023-2024)
-  - Assisted with course development and student mentoring for graduate-level computational methods courses
-  - Led weekly recitation sections focusing on applied numerical methods and computational fluid dynamics
+### Teaching Experience
 
-## Professional Experience
+#### Carnegie Mellon University
+- **Teaching Assistant**, 24-261 Mechanics I (Undergraduate Level, CMU) - Fall 2024
+- **Teaching Assistant**, 24-718 Computational Fluid Dynamics (Graduate Level, CMU) - Fall 2023
 
-### Autodesk Research
-- **Research Intern** (Summer 2024)
-  - Developed machine learning techniques for large-scale engineering simulations
-  - Collaborated with interdisciplinary research team on next-generation simulation tools
+#### Shanghai Jiao Tong University
+- **Teaching Assistant**, Chassis and Powertrain Design for Automobiles (Undergraduate Level, SJTU) - Spring 2021
 
-### Shanghai Jiao Tong University
-- **Undergraduate Research Assistant** (2020-2022)
-  - Assisted with fluid dynamics simulations for biomedical applications
-  - Developed data processing pipelines for experimental flow measurements
+### Research Positions
 
-## Technical Skills
+#### Carnegie Mellon University
+- **Graduate Research Assistant** – Oct 2022–Present
+  - Department of Mechanical Engineering
+  - Collaborations: Eaton Research Labs, ERDC, Manufacturing Futures Institute
 
-- **Programming Languages**: Python, MATLAB, C++, Julia
-- **Machine Learning**: PyTorch, TensorFlow, JAX
-- **Scientific Computing**: FEniCS, OpenFOAM, ANSYS Fluent
-- **Data Science**: Pandas, NumPy, SciPy, Matplotlib
-- **Languages**: English (Fluent), Chinese (Native), German (Intermediate)
+#### Shanghai Jiao Tong University
+- **Undergraduate Research Assistant** – Apr 2019–Jun 2022
+  - Center for Combustion and Environmental Technology
+
+#### Le Mans Université
+- **Research Intern** – Jan 2021–Mar 2021
+  - Laboratoire d'Acoustique de l'Université du Mans (LAUM)
+
+## Professional Affiliations
+
+### Professional Memberships
+- Association for Computing Machinery (ACM)
+- American Society of Mechanical Engineers (ASME)
+- American Physical Society (APS)
+- American Heart Association (AHA)
