@@ -38,3 +38,7 @@ author_profile: true
 - American Society of Mechanical Engineers (ASME)
 - American Physical Society (APS)
 - American Heart Association (AHA)
+
+### Peer Review
+- IEEE/ASME Transactions on Mechatronics
+- Journal of Mechanical Design

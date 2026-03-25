@@ -12,6 +12,7 @@ My research interests lie in the intersection of machine learning and computatio
 ## Education
 
 * Ph.D. in Mechanical Engineering, Carnegie Mellon University, 2022 - present
+* M.S. in Mechanical Engineering, Carnegie Mellon University, 2024
 * B.Eng. in Mechanical Engineering, Shanghai Jiao Tong University, 2018 - 2022
 * B.A. in German, Shanghai Jiao Tong University, 2018 - 2022
 
