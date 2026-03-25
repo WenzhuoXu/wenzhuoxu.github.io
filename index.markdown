@@ -1,9 +1,8 @@
 ---
 layout: single
+title: "About Me"
 author_profile: true
 ---
-
-# About Me
 
 I am a PhD candidate in the [Department of Mechanical Engineering](https://www.meche.engineering.cmu.edu/index.html) at [Carnegie Mellon University](https://www.cmu.edu/). I am fortunate to be advised by [Prof. Christopher McComb](https://engineering.cmu.edu/directory/bios/mccomb-christopher.html) and [Prof. Noelia Grande Gutiérrez](https://www.meche.engineering.cmu.edu/directory/bios/grande-gutierrez-noelia.html).
 
