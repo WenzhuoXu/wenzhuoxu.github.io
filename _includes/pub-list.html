@@ -1,0 +1,34 @@
+{% comment %}
+  Renders a list of entries from _data/publications.yml.
+  Usage: {% include pub-list.html entries=some_filtered_array %}
+{% endcomment %}
+<div class="pub-list">
+  {%- for pub in include.entries -%}
+  <div class="pub"{% if pub.id %} id="{{ pub.id }}"{% endif %}>
+    <p class="pub__title">
+      {%- if pub.url -%}
+      <a href="{{ pub.url }}">{{ pub.title }}</a>
+      {%- else -%}
+      {{ pub.title }}
+      {%- endif -%}
+      {%- if pub.status %} <span class="status">{{ pub.status }}</span>{% endif -%}
+    </p>
+    {%- if pub.authors %}
+    <p class="pub__authors">{{ pub.authors }}</p>
+    {%- endif %}
+    {%- if pub.venue %}
+    <p class="pub__venue">{{ pub.venue }}</p>
+    {%- endif %}
+    {%- if pub.takeaway %}
+    <p class="pub__takeaway">{{ pub.takeaway }}</p>
+    {%- endif %}
+    {%- if pub.links %}
+    <p class="pub__links">
+      {%- for link in pub.links -%}
+      <a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %} <span class="pub__sep">·</span> {% endunless %}
+      {%- endfor -%}
+    </p>
+    {%- endif %}
+  </div>
+  {%- endfor -%}
+</div>

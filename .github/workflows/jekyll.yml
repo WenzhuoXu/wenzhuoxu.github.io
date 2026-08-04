@@ -46,6 +46,10 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+          # jekyll-remote-theme downloads the theme tarball from the GitHub API
+          # at build time. Without a token it does so anonymously and builds
+          # fail intermittently with 403 rate-limit errors.
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3

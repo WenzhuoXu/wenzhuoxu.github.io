@@ -25,6 +25,10 @@ group :jekyll_plugins do
   gem 'rspec'
 end
 
+# webrick left the Ruby stdlib in 3.0, and `jekyll serve` needs it. Local
+# development only — `jekyll build`, which is what CI runs, does not use it.
+gem "webrick", "~> 1.8"
+
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
 platforms :mingw, :x64_mingw, :mswin, :jruby do

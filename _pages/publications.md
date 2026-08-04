@@ -1,42 +1,51 @@
 ---
-title: Publications
-layout: single
+title: "Publications"
 permalink: /publications/
-author_profile: true
+layout: single
+classes: wide
+author_profile: false
+toc: true
+toc_sticky: true
+toc_label: "Contents"
+read_time: false
+share: false
 ---
 
-## Journal Articles
+[Google Scholar](https://scholar.google.com/citations?user=3RqGjxwAAAAJ&hl=en) carries the most current list and citation counts.
 
-* **Wenzhuo Xu**, et al., and Noelia Grande Gutiérrez. "Energy-based feature extraction with adaptive local domain decomposition for prediction of transient and turbulence flow with operator regression models." *Computers & Fluids*, 2026.
+## Journal articles
 
-* Chen, Jiangce, **Wenzhuo Xu**, Zeda Xu, Noelia Grande Gutiérrez, Sneha Prabha Narra, and Christopher McComb. "Enforcing the Principle of Locality for Physical Simulations with Neural Operators." *Journal of Computational Physics*, Volume 538, 2025. [[Elsevier]](https://doi.org/10.1016/j.jcp.2025.114131)
+{% assign journals = site.data.publications | where: "type", "journal" %}
+{% include pub-list.html entries=journals %}
 
-* **Wenzhuo Xu**, Christopher McComb, and Noelia Grande Gutierrez. "Taylor Series Error Correction Network for Super-Resolution of Discretized Partial Differential Equation Solutions." *Journal of Computational Physics*, Volume 521, 2025. [[Elsevier]](https://doi.org/10.1016/j.jcp.2024.113569)
+## Conference papers
 
-* Chen, Jiangce, **Wenzhuo Xu**, Martha Baldwin, Björn Nijhuis, Ton van den Boogaard, Noelia Grande Gutiérrez, Sneha Prabha Narra, and Christopher McComb. "Capturing Local Temperature Evolution during Additive Manufacturing through Fourier Neural Operators." *Journal of Manufacturing Science and Engineering* 146.9 (2024). [[ASME]](https://asmedigitalcollection.asme.org/manufacturingscience/article/146/9/091001/1199320)
+{% assign conferences = site.data.publications | where: "type", "conference" %}
+{% include pub-list.html entries=conferences %}
 
-## Conference Papers
+## Preprints and technical reports
 
-* **Wenzhuo Xu**, Akibi Archer, Mike McCarrell, Scott Hesser, Noelia Grande Gutiérrez, and Christopher McComb. "Fast Super-Resolution Analysis of Low-Pressure Duct Air Flow through Adaptive Domain Decomposition." *IDETC/CIE2025* (2025). 
+{% assign reports = site.data.publications | where: "type", "report" %}
+{% include pub-list.html entries=reports %}
 
-* **Wenzhuo Xu**, Noelia Grande Gutierrez, and Christopher McComb. "MegaFlow2D: A Parametric Dataset for Machine Learning Super-resolution in Computational Fluid Dynamics Simulations." In *Proceedings of Cyber-Physical Systems and Internet of Things Week 2023 (CPS-IoT Week '23)*. [[ACM]](https://dl.acm.org/doi/abs/10.1145/3576914.3587552)
+## Talks
 
-* Chen, Jiangce, **Wenzhuo Xu**, Martha Baldwin, Björn Nijhuis, Ton van den Boogaard, Noelia Grande Gutiérrez, Sneha Prabha Narra, and Christopher McComb. "Capturing Local Temperature Evolution during Additive Manufacturing through Fourier Neural Operators." *IDETC-CIE 2023* (2023). [[arXiv]](https://arxiv.org/abs/2307.01804)
+### Conference presentations
 
-## Preprints
+- **Graph-based domain decomposition for scalable cardiovascular flow super-resolution**<br>
+  <span class="talks__venue">APS Division of Fluid Dynamics Meeting, Houston, TX — November 2025</span>
+- **Adaptive local domain decomposition for learning large-scale multi-physics numerical simulations**<br>
+  <span class="talks__venue">APS Division of Fluid Dynamics Meeting, Salt Lake City, UT — November 2024</span>
+- **Taylor series error correction network for super-resolution of discretized fluid solutions**<br>
+  <span class="talks__venue">APS Division of Fluid Dynamics Meeting, Washington, DC — November 2023</span>
+- **MegaFlow2D: a parametric dataset for machine learning super-resolution in CFD simulations**<br>
+  <span class="talks__venue">CPS-IoT Week, San Antonio, TX — May 2023</span>
+{: .talks}
 
-* **Wenzhuo Xu**, et al., and Christopher McComb. "Scalable super-resolution of flow conveyance systems through adaptive domain decomposition." *Under Review at Journal of Manufacturing Science and Engineering*, 2025.
+### Invited talks
 
-## Conference & Invited Talks
-
-<!-- * "Fast Super-Resolution Analysis of Low-Pressure Duct Air Flow through Adaptive Domain Decomposition", ASME IDETC/CIE 2025, Anaheim, CA, Aug 2025. -->
-
-* "Graph-Based Domain Decomposition for Scalable Cardiovascular Flow Super-Resolution", APS-DFD 2025, Houston, TX, Nov 2025.
-
-* "Adaptive Local Domain Decomposition for Learning Large-Scale Multi-physics Numerical Simulations", APS-DFD 2024, Salt Lake City, UT, Nov 2024.
-
-* "Taylor series error correction network for super-resolution of discretized fluid solutions", APS-DFD 2023, Washington DC, Nov 2023.
-
-* "Machine Learning for Large-Scale Multi-physics Engineering Simulations", Invited talk at CMU Mechanical Engineering Ph.D. Research Symposium, Mar 2025.
-
-* "Machine Learning in Large-Scale Engineering Simulations", Invited talk at Autodesk Research, Nov 2024.
+- **Machine learning for large-scale multi-physics engineering simulations**<br>
+  <span class="talks__venue">CMU Mechanical Engineering Ph.D. Research Symposium — March 2025</span>
+- **Machine learning in large-scale engineering simulations**<br>
+  <span class="talks__venue">Autodesk Research, San Francisco, CA — November 2024</span>
+{: .talks}

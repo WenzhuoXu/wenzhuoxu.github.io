@@ -1,0 +1,362 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough).
+#
+# WARNING: this file SHADOWS the remote theme's own assets/css/main.scss.
+# The two @import lines below are what pull the theme in — delete either one
+# and the site loses all styling. Sass variables in Minimal Mistakes (and in
+# its skins) are declared with !default, so any override MUST sit ABOVE the
+# imports; anything below them is inert.
+#
+# Sass engine here is Ruby Sass 3.7.4 (pinned by github-pages 228 ->
+# jekyll-sass-converter 1.5.2). No @use, no @forward, no math.div.
+---
+
+@charset "utf-8";
+
+// ===========================================================================
+// 1. VARIABLE OVERRIDES — must precede the imports
+// ===========================================================================
+
+$sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+  "Noto Sans", Arial, sans-serif;
+$global-font-family: $sans-serif;
+$header-font-family: $sans-serif;
+
+$text-color: #2e2e2e; // high contrast: prints and screenshots cleanly
+$muted-text-color: #5c5c5c;
+$background-color: #fff;
+$primary-color: #1b6ca8;
+$link-color: #1b6ca8;
+$link-color-hover: #10476f;
+$border-color: #e6e6e6;
+$masthead-link-color: $text-color;
+$masthead-link-color-hover: $primary-color;
+
+// ===========================================================================
+// 2. SKIN, THEN THEME — order is load-bearing
+// ===========================================================================
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+// ===========================================================================
+// 3. SITE-SPECIFIC RULES — everything below here is ours
+// ===========================================================================
+
+// NOTE ON UNITS: Minimal Mistakes sizes everything in `em` off the root font
+// size, and _reset.scss ramps that root from 16px up to 22px at wide
+// viewports. 22px body copy is much larger than the 16–18px that academic
+// sites settle on, and $type-size-* values compound when set on both a
+// container and its children (that is how pub metadata ended up at 12px).
+//
+// So: pin the root ramp lower here, and express every rule below in `rem`
+// against it. Because the whole theme is em/rem based, this rescales nav,
+// sidebar, headings and body coherently in one place.
+html {
+  font-size: 16px;
+
+  @media (min-width: 64em) {
+    font-size: 17px;
+  }
+}
+
+$measure: 48rem;
+$size-body: 1rem;
+$size-small: 0.82rem;
+
+// The theme's own prose rules sit on its em ramp and land at 16px regardless,
+// which leaves theme-rendered paragraphs a size adrift from every rule below.
+// Pin them to the same scale so the whole site is one typographic system.
+.page__content {
+  p,
+  li,
+  dl,
+  dd,
+  table {
+    font-size: $size-body;
+  }
+}
+
+// --- Reading measure -------------------------------------------------------
+// Setting `author_profile: false` removes the profile card but NOT the column
+// it lived in: the theme keeps floating .page to the right, leaving ~300px of
+// dead space down the left of every wide page. Reclaim that width and centre a
+// fixed measure instead — one centred column, which is what the page wanted.
+// No media query: below 64em `float:none` and `width:100%` are already the
+// defaults, so this is a no-op there — but the max-width and auto margins DO
+// need to apply at every width, otherwise the 768–1023px band gets a capped
+// column jammed against the left edge with the h1 overhanging it.
+.layout--single.wide .page {
+  float: none;
+  width: 100%;
+  max-width: $measure;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// The homepage is deliberately NOT wide (it keeps the author card), but with
+// no cap its prose runs to ~950px in the 768–1023px band. Cap the inner wrap —
+// .page__content is float:left in the theme, so a margin:auto on it does
+// nothing.
+.layout--single:not(.wide) .page__inner-wrap {
+  max-width: $measure;
+}
+
+// --- Table of contents -----------------------------------------------------
+// Under `classes: wide` the theme deliberately un-sticks the TOC and drops it
+// inline above the content — but it keeps the boxed sidebar styling, so it
+// lands as a full-width panel with a solid blue header bar sitting on top of
+// the article. Restyle it as a quiet "on this page" index instead.
+.wide .sidebar__right {
+  margin-bottom: 2.25em;
+}
+
+.wide .toc {
+  background: transparent;
+  border: 0;
+  border-left: 2px solid $border-color;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: $global-font-family;
+
+  .nav__title {
+    background: transparent;
+    border-radius: 0;
+    color: $muted-text-color;
+    font-size: $size-small;
+    letter-spacing: 0.06em;
+    padding: 0 0 0.35em 1.1em;
+    text-transform: uppercase;
+  }
+
+  .toc__menu {
+    a {
+      border-bottom: 0;
+      color: $link-color;
+      font-size: $size-small;
+      font-weight: 400;
+      padding: 0.18em 1.1em;
+
+      &:hover {
+        background: transparent;
+        text-decoration: underline;
+      }
+    }
+
+    li ul li a {
+      padding-left: 2.2em;
+    }
+
+    .active a {
+      background: transparent;
+      color: $primary-color;
+      font-weight: 700;
+    }
+  }
+}
+
+// --- Headings --------------------------------------------------------------
+// The h1 has to be pinned on the same rem ramp as h2/h3, or it stays on the
+// theme's em ramp and ends up barely larger than an h2.
+.page__title {
+  font-size: 2rem;
+  line-height: 1.25;
+}
+
+// A hairline rule is the only visual hierarchy device on these pages.
+.page__content {
+  h2 {
+    font-size: 1.45rem;
+    margin-top: 2.4em;
+    margin-bottom: 0.7em;
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid $border-color;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    margin-top: 1.9em;
+    margin-bottom: 0.5em;
+  }
+
+  // :first-child never matches — the TOC <aside> precedes the content on
+  // wide pages, and the homepage opens with prose. :first-of-type does.
+  h2:first-of-type {
+    margin-top: 1.4em;
+  }
+}
+
+// --- Affiliation strip (homepage) -----------------------------------------
+.affiliations {
+  margin: 0 0 0.35em !important;
+  line-height: 1.5;
+  font-size: $size-body !important;
+}
+
+.affiliations + p:not(.affiliations) {
+  margin-top: 1.4em;
+}
+
+// --- Inline slash-separated link row (homepage) ---------------------------
+// Separators are literal text in index.markdown, not a pseudo-element — a
+// generated "/" inside the following <a> becomes part of that link's hit area
+// and of its accessible name.
+.linkrow {
+  margin: 1.4em 0 0;
+  font-size: $size-body !important;
+  color: $muted-text-color;
+}
+
+// --- News feed -------------------------------------------------------------
+.news {
+  margin-top: 0;
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    font-size: $size-body !important;
+    margin-bottom: 0.45em;
+    line-height: 1.55;
+  }
+
+  strong {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+// --- Publication / project entries ----------------------------------------
+.pub-list {
+  margin-bottom: 0.5em;
+}
+
+.pub {
+  margin: 0 0 1.9em;
+  padding-left: 0.9em;
+  border-left: 2px solid $border-color;
+
+  p {
+    margin: 0 0 0.15em !important;
+    line-height: 1.5;
+    font-size: $size-body !important;
+  }
+
+  &:target {
+    border-left-color: $primary-color;
+  }
+}
+
+// These are all <p> inside .pub, so they need to out-specify `.pub p` above.
+.pub .pub__title {
+  font-weight: 700;
+  font-size: 1.1rem !important;
+  line-height: 1.4 !important;
+  margin-bottom: 0.3em !important;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.pub .pub__authors {
+  color: $text-color;
+}
+
+.pub .pub__venue {
+  color: $muted-text-color;
+}
+
+.pub .pub__takeaway {
+  margin-top: 0.5em !important;
+  color: $muted-text-color;
+}
+
+.pub .pub__links {
+  margin-top: 0.5em !important;
+  font-size: $size-small !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+
+  a {
+    white-space: nowrap;
+  }
+}
+
+.pub__sep {
+  color: $muted-text-color;
+}
+
+// --- Status pill for work in preparation ----------------------------------
+.status {
+  display: inline-block;
+  font-size: $size-small;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $muted-text-color;
+  border: 1px solid $border-color;
+  border-radius: 2px;
+  padding: 0.05em 0.45em;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+// --- Inline "Paper · Code · Talk" menus under a project -------------------
+.inline-links {
+  font-size: $size-small !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 1em;
+
+  a {
+    white-space: nowrap;
+  }
+}
+
+// --- "See all publications →" ---------------------------------------------
+.more {
+  font-size: $size-body !important;
+  margin-top: 1.5em;
+}
+
+// --- Talks, CV and education lists ----------------------------------------
+.talks,
+.cv-list,
+.edu {
+  li {
+    font-size: $size-body !important;
+    margin-bottom: 0.7em;
+    line-height: 1.5;
+  }
+}
+
+.talks__venue,
+.cv-sub {
+  color: $muted-text-color;
+}
+
+.cv-note {
+  font-size: $size-body !important;
+  line-height: 1.55;
+  margin: 0 0 0.7em !important;
+}
+
+.cv-download {
+  font-size: $size-body !important;
+}
+
+// --- Small screens ---------------------------------------------------------
+@media (max-width: 37.5em) {
+  .pub {
+    padding-left: 0.65em;
+  }
+
+  .linkrow {
+    line-height: 2;
+  }
+}

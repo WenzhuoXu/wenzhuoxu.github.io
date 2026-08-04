@@ -1,0 +1,151 @@
+# Single source of truth for every publication, talk-linked paper and technical
+# report on the site. Rendered by _includes/pub-list.html.
+#
+# Fields:
+#   id        anchor target, e.g. /publications/#teecnet
+#   type      journal | conference | report | project
+#   title     plain text
+#   url       optional; wraps the title in a link
+#   authors   HTML (use <strong> for Wenzhuo)
+#   venue     HTML
+#   status    optional short tag rendered as a pill, e.g. "in preparation"
+#   takeaway  one plain-language sentence; what a non-specialist should take away
+#   featured  when true, the entry also appears in Selected Work on the homepage
+#   rank      ordering within Selected Work (ascending)
+#   links     list of {label, url}
+#
+# To add a paper: add an entry here in the right reverse-chronological slot.
+# Nothing else needs editing.
+
+# ---------------------------------------------------------------- journal ---
+- id: flow-conveyance
+  type: journal
+  title: "Scalable super-resolution of flow conveyance systems through adaptive domain decomposition"
+  # Venue per Crossref (DOI 10.1115/1.4071858). NOTE: main_1.tex records this as
+  # JMSE — that is a CV error; the published record is JCISE. Fix the CV too.
+  authors: "<strong>Wenzhuo Xu</strong>, Akibi Archer, Mike McCarrell, Scott Hesser, Noelia Grande Gutiérrez, Christopher McComb"
+  venue: "<em>Journal of Computing and Information Science in Engineering</em> 26 (2026)"
+  url: "https://doi.org/10.1115/1.4071858"
+  takeaway: "Splits a large conveyance geometry into adaptively sized subdomains so a learned super-resolution model runs on full industrial ducts rather than toy meshes."
+  featured: true
+  rank: 4
+  links:
+    - label: "DOI"
+      url: "https://doi.org/10.1115/1.4071858"
+
+- id: energy-based-features
+  type: journal
+  title: "Energy-based feature extraction with adaptive local domain decomposition for prediction of transient and turbulence flow with operator regression models"
+  authors: "<strong>Wenzhuo Xu</strong>, Madhav Karthikeyakannan, Christopher McComb, Noelia Grande Gutiérrez"
+  venue: "<em>Computers &amp; Fluids</em> 307, 106958 (2026)"
+  url: "https://doi.org/10.1016/j.compfluid.2025.106958"
+  takeaway: "Learns which energy content actually matters in a transient or turbulent flow, so an operator-regression surrogate stays accurate where fixed-resolution surrogates drift."
+  links:
+    - label: "DOI"
+      url: "https://doi.org/10.1016/j.compfluid.2025.106958"
+
+- id: locality
+  type: journal
+  title: "Enforcing the principle of locality for physical simulations with neural operators"
+  authors: "Jiangce Chen, <strong>Wenzhuo Xu</strong>, Zeda Xu, Noelia Grande Gutiérrez, Sneha Prabha Narra, Christopher McComb"
+  venue: "<em>Journal of Computational Physics</em> 538, 114131 (2025)"
+  url: "https://doi.org/10.1016/j.jcp.2025.114131"
+  takeaway: "Shows that restricting a neural operator to a bounded physical neighbourhood is what lets it generalize to meshes far larger than anything it was trained on."
+  links:
+    - label: "DOI"
+      url: "https://doi.org/10.1016/j.jcp.2025.114131"
+
+- id: teecnet
+  type: journal
+  title: "Taylor series error correction network for super-resolution of discretized partial differential equation solutions"
+  authors: "<strong>Wenzhuo Xu</strong>, Christopher McComb, Noelia Grande Gutiérrez"
+  venue: "<em>Journal of Computational Physics</em> 521, 113569 (2025)"
+  url: "https://doi.org/10.1016/j.jcp.2024.113569"
+  takeaway: "Learns the discretization error between a coarse and a fine solver, so a coarse mesh recovers fine-mesh accuracy at a fraction of the cost."
+  featured: true
+  rank: 5
+  links:
+    - label: "DOI"
+      url: "https://doi.org/10.1016/j.jcp.2024.113569"
+
+- id: fno-am-journal
+  type: journal
+  title: "Capturing local temperature evolution during additive manufacturing through Fourier neural operators"
+  authors: "Jiangce Chen, <strong>Wenzhuo Xu</strong>, Martha Baldwin, Björn Nijhuis, Ton van den Boogaard, Noelia Grande Gutiérrez, Sneha Prabha Narra, Christopher McComb"
+  venue: "<em>Journal of Manufacturing Science and Engineering</em> 146(9) (2024)"
+  url: "https://asmedigitalcollection.asme.org/manufacturingscience/article/146/9/091001/1199320"
+  takeaway: "Predicts how temperature evolves locally during metal additive manufacturing — the thermal history that determines whether the finished part is sound."
+  links:
+    - label: "ASME"
+      url: "https://asmedigitalcollection.asme.org/manufacturingscience/article/146/9/091001/1199320"
+
+# ------------------------------------------------------------- conference ---
+- id: duct-idetc
+  type: conference
+  title: "Fast super-resolution analysis of low-pressure duct air flow through adaptive domain decomposition"
+  authors: "<strong>Wenzhuo Xu</strong>, Akibi Archer, Mike McCarrell, Scott Hesser, Noelia Grande Gutiérrez, Christopher McComb"
+  venue: "<em>ASME IDETC-CIE</em> (2025)"
+  takeaway: "The adaptive decomposition applied to Eaton's production duct geometries, cutting turnaround on a design-loop simulation from hours to minutes."
+
+- id: fno-am-idetc
+  type: conference
+  title: "Capturing local temperature evolution during additive manufacturing through Fourier neural operators"
+  authors: "Jiangce Chen, <strong>Wenzhuo Xu</strong>, Martha Baldwin, Björn Nijhuis, Ton van den Boogaard, Noelia Grande Gutiérrez, Sneha Prabha Narra, Christopher McComb"
+  venue: "<em>ASME IDETC-CIE</em> (2023)"
+  url: "https://arxiv.org/abs/2307.01804"
+  takeaway: "The conference version of the additive-manufacturing thermal-history work."
+  links:
+    - label: "arXiv"
+      url: "https://arxiv.org/abs/2307.01804"
+
+- id: megaflow2d
+  type: conference
+  title: "MegaFlow2D: A parametric dataset for machine learning super-resolution in computational fluid dynamics simulations"
+  authors: "<strong>Wenzhuo Xu</strong>, Noelia Grande Gutiérrez, Christopher McComb"
+  venue: "<em>Proceedings of Cyber-Physical Systems and Internet of Things Week 2023 (CPS-IoT Week '23)</em>"
+  url: "https://dl.acm.org/doi/abs/10.1145/3576914.3587552"
+  takeaway: "A parametric CFD dataset built so super-resolution methods can be compared on the same footing instead of each on its own bespoke flow."
+  links:
+    - label: "ACM"
+      url: "https://dl.acm.org/doi/abs/10.1145/3576914.3587552"
+
+# ------------------------------------ preprints and technical reports ---
+- id: thinking-with-anchors
+  type: report
+  title: "Thinking with Anchors: Grounded and Efficient Document Reasoning"
+  authors: "S. Zhu, Y. Zhu, <strong>Wenzhuo Xu</strong>, J. Kuen, &hellip;, Jiuxiang Gu"
+  venue: "arXiv preprint (2026)"
+  status: "to appear"
+  takeaway: "Grounds document reasoning in explicit anchors in the source, so an answer can be traced back to the span it came from rather than asserted."
+  featured: true
+  rank: 3
+  links:
+    - label: "HuggingFace"
+      url: "https://huggingface.co/collections/adopd/thinking-with-anchors"
+
+- id: phyreact
+  type: report
+  title: "PhyReAct: Agentic Physical Reasoning for Video Evaluation"
+  authors: "Adobe Research — core contributor"
+  venue: "Technical report"
+  status: "in preparation"
+  takeaway: "Reframes video evaluation from one opaque quality score into an auditable verdict: the generation prompt is compiled into typed physical obligations and a measurement plan, frozen perception operators return only measurements, and deterministic rules compose them into supported / contradicted / unknown with full provenance."
+  featured: true
+  rank: 1
+  links:
+    - label: "Project"
+      url: "/research/#phyreact"
+
+# ------------------------------------------------- homepage-only entries ---
+# Not a publication; appears in Selected Work and on /research/ only.
+- id: still-life
+  type: project
+  title: "Project Still Life: Executable Physics from Static Documents"
+  authors: "Adobe Research — core contributor"
+  venue: "Ongoing"
+  takeaway: "Reads the physics printed in a document — the equations and the prose around them — and compiles it into a runnable simulation whose dimensions, conservation laws and limiting cases are checked before it is allowed to run."
+  featured: true
+  rank: 2
+  links:
+    - label: "Project"
+      url: "/research/#still-life"

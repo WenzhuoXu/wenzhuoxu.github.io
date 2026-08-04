@@ -4,3 +4,7 @@ _site
 .jekyll-metadata
 vendor
 codemcp.toml
+
+# Machine-local Claude Code settings; .claude/launch.json is shared config and
+# is tracked.
+.claude/settings.local.json
