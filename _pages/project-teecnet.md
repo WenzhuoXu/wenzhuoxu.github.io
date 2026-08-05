@@ -31,7 +31,7 @@ That change of target is the whole design. The solution field is large, sharp an
 
 And the coefficient has to be learned rather than derived. Observed order of accuracy tracks theory well for global quantities — integrate over a whole surface and it behaves — but correlates inconsistently with theory for local ones. That inconsistency is precisely the gap a learned coefficient fills.
 
-{% include figure.html src="/assets/projects/teecnet/architecture.webp" alt="Schematic of the TEECNet architecture showing edge-wise error estimation feeding a node-wise aggregation." caption="Error is estimated on every mesh edge from its neighbouring nodes, then averaged over the incident edges back onto each node. Nothing in that loop assumes a grid." %}
+{% include figure.html src="/assets/projects/teecnet/architecture.webp" alt="Pipeline diagram: a low-resolution mesh, boundary conditions and the governing physics feed a numerical solver; its coarse solution and the high-resolution mesh both feed TEECNet, which outputs the high-resolution field." caption="The coarse solution and the fine mesh both enter TEECNet; error is estimated on every mesh edge from its neighbouring nodes, then aggregated back onto each node. Nothing in that loop assumes a grid." wide=true %}
 
 It is not that the model tolerates unstructured meshes; it never knew what kind of mesh it was on.
 
@@ -51,11 +51,11 @@ On cost, the advantage widens as the machine shrinks: 1.75× faster than the neu
 
 Then the cylinder wake, which is the hardest case here. From a coarse input that had smeared the wake into the free stream, TEECNet pulls the coherent shed structures and the low-velocity core back out.
 
-{% include figure.html src="/assets/projects/teecnet/wake.webp" alt="Cylinder wake results across several samples showing low-resolution input, TEECNet correction and high-resolution reference." caption="Coarse input, correction, reference. The wake structure comes back out of a field that had lost it." wide=true %}
+{% include figure.html src="/assets/projects/teecnet/megaflow.webp" alt="Five cylinder-wake cases in rows, each with three columns: low-resolution solution, TEECNet correction, and high-resolution solution. The TEECNet column closely matches the high-resolution column in every row." caption="Five MegaFlow2D cases. Column (a) is what the coarse solver produced, (c) is the fine-mesh truth, and (b) is TEECNet — read across each row and the correction lands on the reference." wide=true %}
 
 ## MegaFlow2D
 
-Alongside the method I released **MegaFlow2D**, a parametric flow dataset in the same graph layout. At the time every super-resolution paper reported on its own bespoke flow, so no two numbers were comparable. Both the method and the dataset are public, and the error-correction formulation became the base for the duct-design, domain-decomposition and vascular hemodynamics work that followed.
+Alongside the method I released **MegaFlow2D**, the parametric flow dataset those cases come from. At the time every super-resolution paper reported on its own bespoke flow, so no two numbers were comparable. Both the method and the dataset are public, and the error-correction formulation became the base for the duct-design, domain-decomposition and vascular hemodynamics work that followed.
 
 [TEECNet code](https://github.com/cmudrc/TEECNet) · [MegaFlow2D dataset](https://github.com/cmudrc/MegaFlow2D) · [Paper — J. Comput. Phys. 521 (2025)](https://doi.org/10.1016/j.jcp.2024.113569) · [MegaFlow2D — CPS-IoT Week 2023](https://doi.org/10.1145/3576914.3587552)
 {: .inline-links}

@@ -86,7 +86,7 @@ I built a fully parameterized CFD dataset of more than **100,000 flow-field simu
 
 The method is **deployed in Eaton's jet engine duct system design workflow** — the part I care about most, because a surrogate that never leaves the paper it was published in has not really been tested.
 
-[Journal paper (JCISE 2026)](/publications/#flow-conveyance) · [Conference version (IDETC-CIE 2025)](/publications/#duct-idetc)
+[Project page](/projects/duct-super-resolution/) · [Journal paper (JCISE 2026)](/publications/#flow-conveyance) · [Conference version (IDETC-CIE 2025)](/publications/#duct-idetc)
 {: .inline-links}
 
 ### Domain decomposition for large-scale physics-informed learning {#domain-decomposition}

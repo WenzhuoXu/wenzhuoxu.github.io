@@ -40,10 +40,25 @@
       label: "wall shear stress correlation vs. the reference solver"
 
 - rank: 4
+  title: "Super-resolution for engineering duct design"
+  slug: duct-super-resolution
+  url: /projects/duct-super-resolution/
+  affiliation: "CMU · with Eaton Research Labs and ERDC"
+  period: "2023 – 2026"
+  thumb: /assets/projects/duct-super-resolution/thumb.webp
+  thumb_alt: "Velocity-magnitude renders of a mixing elbow: coarse input, model prediction and high-resolution reference, nearly indistinguishable."
+  tagline: "High-fidelity CFD answers the next morning, so engineers stop exploring and start confirming. This gets the same answer inside the design loop."
+  highlights:
+    - value: "5.5×"
+      label: "faster than the high-fidelity simulation"
+    - value: "Deployed"
+      label: "in Eaton's jet engine duct design workflow"
+
+- rank: 5
   title: "Adaptive local domain decomposition"
   slug: adaptive-domain-decomposition
   url: /projects/adaptive-domain-decomposition/
-  affiliation: "CMU · with Eaton Research Labs and ERDC"
+  affiliation: "CMU · Manufacturing Futures Institute"
   period: "2024"
   thumb: /assets/projects/adaptive-domain-decomposition/thumb.webp
   thumb_alt: "A transitional boundary layer predicted by the model, in yellow and purple, above its near-zero error field."
@@ -54,7 +69,7 @@
     - value: "3"
       label: "physics regimes routed to their own sub-model"
 
-- rank: 5
+- rank: 6
   title: "TEECNet and MegaFlow2D"
   slug: teecnet
   url: /projects/teecnet/
