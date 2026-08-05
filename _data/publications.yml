@@ -10,8 +10,11 @@
 #   venue     HTML
 #   status    optional short tag rendered as a pill, e.g. "in preparation"
 #   takeaway  one plain-language sentence; what a non-specialist should take away
-#   featured  when true, the entry also appears in Selected Work on the homepage
-#   rank      ordering within Selected Work (ascending)
+#   featured  when true, the entry also appears in the homepage bibliography
+#             (Recent publications). Papers only — PROJECTS live in
+#             _data/projects.yml and are a separate component; do not
+#             duplicate a project card here.
+#   rank      ordering in that list (ascending, newest first)
 #   links     list of {label, url}
 #
 # To add a paper: add an entry here in the right reverse-chronological slot.
@@ -28,7 +31,7 @@
   url: "https://doi.org/10.1115/1.4071858"
   takeaway: "Splits a large conveyance geometry into adaptively sized subdomains so a learned super-resolution model runs on full industrial ducts rather than toy meshes."
   featured: true
-  rank: 4
+  rank: 2
   links:
     - label: "DOI"
       url: "https://doi.org/10.1115/1.4071858"
@@ -40,6 +43,8 @@
   venue: "<em>Computers &amp; Fluids</em> 307, 106958 (2026)"
   url: "https://doi.org/10.1016/j.compfluid.2025.106958"
   takeaway: "Learns which energy content actually matters in a transient or turbulent flow, so an operator-regression surrogate stays accurate where fixed-resolution surrogates drift."
+  featured: true
+  rank: 3
   links:
     - label: "DOI"
       url: "https://doi.org/10.1016/j.compfluid.2025.106958"
@@ -51,6 +56,8 @@
   venue: "<em>Journal of Computational Physics</em> 538, 114131 (2025)"
   url: "https://doi.org/10.1016/j.jcp.2025.114131"
   takeaway: "Shows that restricting a neural operator to a bounded physical neighbourhood is what lets it generalize to meshes far larger than anything it was trained on."
+  featured: true
+  rank: 4
   links:
     - label: "DOI"
       url: "https://doi.org/10.1016/j.jcp.2025.114131"
@@ -118,7 +125,7 @@
   status: "to appear"
   takeaway: "Grounds document reasoning in explicit anchors in the source, so an answer can be traced back to the span it came from rather than asserted."
   featured: true
-  rank: 3
+  rank: 1
   links:
     - label: "HuggingFace"
       url: "https://huggingface.co/collections/adopd/thinking-with-anchors"
@@ -130,22 +137,6 @@
   venue: "Technical report"
   status: "in preparation"
   takeaway: "Reframes video evaluation from one opaque quality score into an auditable verdict: the generation prompt is compiled into typed physical obligations and a measurement plan, frozen perception operators return only measurements, and deterministic rules compose them into supported / contradicted / unknown with full provenance."
-  featured: true
-  rank: 1
   links:
     - label: "Project"
       url: "/research/#phyreact"
-
-# ------------------------------------------------- homepage-only entries ---
-# Not a publication; appears in Selected Work and on /research/ only.
-- id: still-life
-  type: project
-  title: "Project Still Life: Executable Physics from Static Documents"
-  authors: "Adobe Research — core contributor"
-  venue: "Ongoing"
-  takeaway: "Reads the physics printed in a document — the equations and the prose around them — and compiles it into a runnable simulation whose dimensions, conservation laws and limiting cases are checked before it is allowed to run."
-  featured: true
-  rank: 2
-  links:
-    - label: "Project"
-      url: "/research/#still-life"

@@ -477,6 +477,43 @@ $size-small: 0.82rem;
   max-width: 11rem;
 }
 
+// --- Homepage bibliography -------------------------------------------------
+// Sits under the project grid, so it must not read as a second card list:
+// no frames, no stats, no takeaways — just the record, tight and scannable.
+.pubs {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.4em 0 0;
+}
+
+.pubs__item {
+  padding: 0.55em 0 0.55em 0.9em;
+  border-left: 2px solid $border-color;
+  margin-bottom: 0.5em;
+}
+
+.pubs__title {
+  display: block;
+  font-size: $size-body;
+  line-height: 1.45;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.pubs__venue {
+  display: block;
+  font-size: $size-small;
+  line-height: 1.5;
+  color: $muted-text-color;
+  margin-top: 0.15em;
+}
+
 // ===========================================================================
 // PROJECT PAGES
 // ===========================================================================

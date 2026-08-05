@@ -38,12 +38,12 @@ The thread through both halves is the same — a model's claim about a physical 
 {% assign cards = site.data.projects | sort: "rank" %}
 {% include project-cards.html entries=cards %}
 
-## Selected work
+## Recent publications
 
 {% assign featured = site.data.publications | where: "featured", true | sort: "rank" %}
-{% include pub-list.html entries=featured %}
+{% include pub-compact.html entries=featured %}
 
-[See all publications and talks →](/publications/)
+[All publications and talks →](/publications/)
 {: .more}
 
 ## Education

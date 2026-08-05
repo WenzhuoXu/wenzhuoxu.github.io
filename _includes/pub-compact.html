@@ -1,0 +1,19 @@
+{% comment %}
+  Compact bibliography rows for the homepage: title, venue, year, nothing else.
+
+  Deliberately NOT the same shape as _includes/pub-list.html or the project
+  cards. Projects show what was built; this shows the publication record. Same
+  work can appear in both, but it must not look like the same component twice.
+
+  Usage: {% include pub-compact.html entries=some_array %}
+{% endcomment %}
+<ul class="pubs">
+  {%- for pub in include.entries -%}
+  <li class="pubs__item">
+    <span class="pubs__title">
+      {%- if pub.url -%}<a href="{{ pub.url }}">{{ pub.title }}</a>{%- else -%}{{ pub.title }}{%- endif -%}
+    </span>
+    <span class="pubs__venue">{{ pub.venue }}{% if pub.status %} <span class="status">{{ pub.status }}</span>{% endif %}</span>
+  </li>
+  {%- endfor -%}
+</ul>
