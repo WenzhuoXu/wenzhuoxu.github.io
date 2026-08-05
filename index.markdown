@@ -40,8 +40,14 @@ The thread through both halves is the same — a model's claim about a physical 
 
 ## Recent publications
 
-{% assign featured = site.data.publications | where: "featured", true | sort: "rank" %}
-{% include pub-compact.html entries=featured %}
+{%- comment -%}
+  Strictly reverse-chronological by `date`, journals and conference papers
+  together. Nothing is hand-picked, so adding a paper to _data/publications.yml
+  with a date is all it takes to surface it here.
+{%- endcomment -%}
+{% assign dated = site.data.publications | where_exp: "p", "p.date" | sort: "date" | reverse %}
+{% assign recent = dated | slice: 0, 6 %}
+{% include pub-compact.html entries=recent %}
 
 [All publications and talks →](/publications/)
 {: .more}

@@ -10,11 +10,11 @@
 #   venue     HTML
 #   status    optional short tag rendered as a pill, e.g. "in preparation"
 #   takeaway  one plain-language sentence; what a non-specialist should take away
-#   featured  when true, the entry also appears in the homepage bibliography
-#             (Recent publications). Papers only — PROJECTS live in
-#             _data/projects.yml and are a separate component; do not
-#             duplicate a project card here.
-#   rank      ordering in that list (ascending, newest first)
+#   date      YYYY-MM of publication. This is the ONLY thing that orders the
+#             homepage list, so a new paper needs no other edit. Entries
+#             without a date (e.g. work in preparation) stay off it.
+#             Conference papers are papers — IDETC-CIE and CPS-IoT Week
+#             belong in this list alongside the journals.
 #   links     list of {label, url}
 #
 # To add a paper: add an entry here in the right reverse-chronological slot.
@@ -30,8 +30,7 @@
   venue: "<em>Journal of Computing and Information Science in Engineering</em> 26 (2026)"
   url: "https://doi.org/10.1115/1.4071858"
   takeaway: "Splits a large conveyance geometry into adaptively sized subdomains so a learned super-resolution model runs on full industrial ducts rather than toy meshes."
-  featured: true
-  rank: 2
+  date: "2026-05"        # Crossref/S2 publicationDate 2026-05-06
   links:
     - label: "DOI"
       url: "https://doi.org/10.1115/1.4071858"
@@ -43,8 +42,7 @@
   venue: "<em>Computers &amp; Fluids</em> 307, 106958 (2026)"
   url: "https://doi.org/10.1016/j.compfluid.2025.106958"
   takeaway: "Learns which energy content actually matters in a transient or turbulent flow, so an operator-regression surrogate stays accurate where fixed-resolution surrogates drift."
-  featured: true
-  rank: 3
+  date: "2026-03"        # Crossref: Computers & Fluids 307, March 2026
   links:
     - label: "DOI"
       url: "https://doi.org/10.1016/j.compfluid.2025.106958"
@@ -56,8 +54,7 @@
   venue: "<em>Journal of Computational Physics</em> 538, 114131 (2025)"
   url: "https://doi.org/10.1016/j.jcp.2025.114131"
   takeaway: "Shows that restricting a neural operator to a bounded physical neighbourhood is what lets it generalize to meshes far larger than anything it was trained on."
-  featured: true
-  rank: 4
+  date: "2025-06"        # S2 publicationDate 2025-06-01
   links:
     - label: "DOI"
       url: "https://doi.org/10.1016/j.jcp.2025.114131"
@@ -69,8 +66,7 @@
   venue: "<em>Journal of Computational Physics</em> 521, 113569 (2025)"
   url: "https://doi.org/10.1016/j.jcp.2024.113569"
   takeaway: "Learns the discretization error between a coarse and a fine solver, so a coarse mesh recovers fine-mesh accuracy at a fraction of the cost."
-  featured: true
-  rank: 5
+  date: "2025-01"        # JCP vol. 521 is the January 2025 issue
   links:
     - label: "DOI"
       url: "https://doi.org/10.1016/j.jcp.2024.113569"
@@ -82,6 +78,7 @@
   venue: "<em>Journal of Manufacturing Science and Engineering</em> 146(9) (2024)"
   url: "https://asmedigitalcollection.asme.org/manufacturingscience/article/146/9/091001/1199320"
   takeaway: "Predicts how temperature evolves locally during metal additive manufacturing — the thermal history that determines whether the finished part is sound."
+  date: "2024-09"        # JMSE 146(9) = September 2024
   links:
     - label: "ASME"
       url: "https://asmedigitalcollection.asme.org/manufacturingscience/article/146/9/091001/1199320"
@@ -91,8 +88,13 @@
   type: conference
   title: "Fast super-resolution analysis of low-pressure duct air flow through adaptive domain decomposition"
   authors: "<strong>Wenzhuo Xu</strong>, Akibi Archer, Mike McCarrell, Scott Hesser, Noelia Grande Gutiérrez, Christopher McComb"
-  venue: "<em>ASME IDETC-CIE</em> (2025)"
+  venue: "<em>ASME IDETC-CIE</em>, Vol. 2A: 45th Computers and Information in Engineering Conference (2025)"
+  url: "https://doi.org/10.1115/detc2025-169006"
   takeaway: "The adaptive decomposition applied to Eaton's production duct geometries, cutting turnaround on a design-loop simulation from hours to minutes."
+  date: "2025-08"        # Crossref: published 2025-08-17
+  links:
+    - label: "DOI"
+      url: "https://doi.org/10.1115/detc2025-169006"
 
 - id: fno-am-idetc
   type: conference
@@ -101,6 +103,7 @@
   venue: "<em>ASME IDETC-CIE</em> (2023)"
   url: "https://arxiv.org/abs/2307.01804"
   takeaway: "The conference version of the additive-manufacturing thermal-history work."
+  date: "2023-08"        # IDETC-CIE 2023, August
   links:
     - label: "arXiv"
       url: "https://arxiv.org/abs/2307.01804"
@@ -112,6 +115,7 @@
   venue: "<em>Proceedings of Cyber-Physical Systems and Internet of Things Week 2023 (CPS-IoT Week '23)</em>"
   url: "https://dl.acm.org/doi/abs/10.1145/3576914.3587552"
   takeaway: "A parametric CFD dataset built so super-resolution methods can be compared on the same footing instead of each on its own bespoke flow."
+  date: "2023-05"        # CPS-IoT Week 2023, San Antonio, May
   links:
     - label: "ACM"
       url: "https://dl.acm.org/doi/abs/10.1145/3576914.3587552"
@@ -123,9 +127,11 @@
   authors: "S. Zhu, Y. Zhu, <strong>Wenzhuo Xu</strong>, J. Kuen, &hellip;, Jiuxiang Gu"
   venue: "arXiv preprint (2026)"
   status: "to appear"
+  # No arXiv ID yet; the HuggingFace collection is the public artifact, so the
+  # title links there rather than nowhere. Swap for the arXiv URL once live.
+  url: "https://huggingface.co/collections/adopd/thinking-with-anchors"
   takeaway: "Grounds document reasoning in explicit anchors in the source, so an answer can be traced back to the span it came from rather than asserted."
-  featured: true
-  rank: 1
+  date: "2026-09"        # forthcoming; sort key only, not a claimed date
   links:
     - label: "HuggingFace"
       url: "https://huggingface.co/collections/adopd/thinking-with-anchors"
