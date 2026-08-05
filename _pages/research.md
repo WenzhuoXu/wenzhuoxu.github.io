@@ -99,7 +99,7 @@ This is the **first ML method to scale PINNs past 3 million physical elements**.
 
 The method is deployed in two very different settings: metal additive manufacturing and cardiovascular simulation.
 
-[Locality paper (JCP 2025)](/publications/#locality) · [Additive manufacturing application (JMSE 2024)](/publications/#fno-am-journal)
+[Project page](/projects/adaptive-domain-decomposition/) · [Locality paper (JCP 2025)](/publications/#locality) · [Additive manufacturing application (JMSE 2024)](/publications/#fno-am-journal)
 {: .inline-links}
 
 ### Graph neural operator super-resolution for vascular hemodynamics {#vascular}
@@ -116,7 +116,7 @@ I developed a discrete formulation of TEECNet using a **branch–trunk architect
 
 The clinical arm of this work is 4D flow MRI enhancement: anatomy-aware machine learning for 4D flow MRI, aimed at improving management of cardiovascular disease such as bicuspid aortic valve (BAV) by producing real-time, accurate, patient-specific flow fields and the hemodynamic metrics that inform a decision.
 
-[Talk (APS-DFD 2025)](/publications/#talks)
+[Project page](/projects/cardiovascular-super-resolution/) · [Talk (APS-DFD 2025)](/publications/#talks)
 {: .inline-links}
 
 ### TEECNet and MegaFlow2D {#teecnet-megaflow}
@@ -127,5 +127,5 @@ The method and the dataset everything above is built on.
 
 **MegaFlow2D** exists because the comparison was not possible before it. Every super-resolution method was being reported on its own bespoke flow, so nothing was commensurable. It is a parametric dataset that puts architectures for fluid flow prediction and enhancement on common ground.
 
-[TEECNet (JCP 2025)](/publications/#teecnet) · [MegaFlow2D (CPS-IoT Week 2023)](/publications/#megaflow2d)
+[Project page](/projects/teecnet/) · [TEECNet code](https://github.com/cmudrc/TEECNet) · [MegaFlow2D dataset](https://github.com/cmudrc/MegaFlow2D) · [TEECNet (JCP 2025)](/publications/#teecnet) · [MegaFlow2D (CPS-IoT Week 2023)](/publications/#megaflow2d)
 {: .inline-links}

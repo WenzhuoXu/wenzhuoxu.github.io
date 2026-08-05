@@ -33,24 +33,10 @@ The thread through both halves is the same — a model's claim about a physical 
 <a href="mailto:wzxu@cmu.edu">Email</a> / <a href="/cv/">CV</a> / <a href="https://scholar.google.com/citations?user=3RqGjxwAAAAJ&hl=en">Google Scholar</a> / <a href="https://github.com/WenzhuoXu">GitHub</a> / <a href="https://www.linkedin.com/in/wenzhuo-xu-174592110/">LinkedIn</a>
 {: .linkrow}
 
-## News
+## Projects
 
-{% comment %}
-  Newest first. Keep this to ~8 entries and prune the tail; a feed whose top
-  item is a year old argues that the research has stalled. If it cannot be kept
-  current, delete the whole section — the footer timestamp carries the load on
-  its own.
-{% endcomment %}
-
-- **2026** — *Thinking with Anchors: Grounded and Efficient Document Reasoning* to appear on arXiv; datasets are up in the [HuggingFace collection](https://huggingface.co/collections/adopd/thinking-with-anchors).
-- **2026.06** — *Scalable super-resolution of flow conveyance systems through adaptive domain decomposition* published in the *Journal of Computing and Information Science in Engineering*.
-- **2026.05** — Started as a Research Scientist Intern at Adobe Research, working with Tong Sun and Jiuxiang Gu on agentic physical reasoning.
-- **2026.03** — *Energy-based feature extraction with adaptive local domain decomposition* published in *Computers & Fluids*.
-- **2025.11** — Talk at the APS Division of Fluid Dynamics meeting, Houston, on graph-based domain decomposition for cardiovascular flow super-resolution.
-- **2025.08** — Presented the duct super-resolution work at ASME IDETC-CIE, Anaheim.
-- **2025.06** — *Enforcing the principle of locality for physical simulations with neural operators* published in the *Journal of Computational Physics*.
-- **2025.03** — Invited talk at the CMU Mechanical Engineering Ph.D. Research Symposium.
-{: .news}
+{% assign cards = site.data.projects | sort: "rank" %}
+{% include project-cards.html entries=cards %}
 
 ## Selected work
 

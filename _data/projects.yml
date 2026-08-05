@@ -1,0 +1,70 @@
+# Project cards. Rendered by _includes/project-cards.html on the homepage.
+#
+# `rank` controls order. Entries without a `thumb` render as text-only cards —
+# used for work with nothing publishable to show yet.
+#
+# Every number in `highlights` is checked against the source deck or paper.
+# Do not add one you cannot point at.
+
+- rank: 1
+  title: "Agentic physical reasoning for video evaluation"
+  slug: phyreact
+  url: /research/#phyreact
+  affiliation: "Adobe Research"
+  period: "2026"
+  status: "report in preparation"
+  tagline: "Video generators are scored with one opaque number. This turns the score into an auditable verdict you can trace back to a measurement."
+
+- rank: 2
+  title: "Executable physics from static documents"
+  slug: still-life
+  url: /research/#still-life
+  affiliation: "Adobe Research"
+  period: "2026"
+  status: "ongoing"
+  tagline: "The physics printed in a textbook is inert. This reads the equations and the prose around them and compiles a simulation you can actually run."
+
+- rank: 3
+  title: "Super-resolution for cardiovascular blood flow"
+  slug: cardiovascular-super-resolution
+  url: /projects/cardiovascular-super-resolution/
+  affiliation: "CMU · BioSiMMlab"
+  period: "2025"
+  thumb: /assets/projects/cardiovascular-super-resolution/thumb.webp
+  thumb_alt: "Three renders of the same diseased coronary artery tree coloured by time-averaged wall shear stress — the low-resolution input almost uniformly dark, the ML prediction and the high-resolution CFD reference nearly identical."
+  tagline: "A coarse blood-flow simulation gets wall shear stress wrong — the marker that flags a dangerous plaque. A learned correction recovers it in 20 minutes instead of 12 hours."
+  highlights:
+    - value: "35×"
+      label: "faster than high-fidelity CFD"
+    - value: "0.92–0.94"
+      label: "wall shear stress correlation vs. the reference solver"
+
+- rank: 4
+  title: "Adaptive local domain decomposition"
+  slug: adaptive-domain-decomposition
+  url: /projects/adaptive-domain-decomposition/
+  affiliation: "CMU · with Eaton Research Labs and ERDC"
+  period: "2024"
+  thumb: /assets/projects/adaptive-domain-decomposition/thumb.webp
+  thumb_alt: "A transitional boundary layer predicted by the model, in yellow and purple, above its near-zero error field."
+  tagline: "One network trained on a whole flow ends up mediocre everywhere in it. Cutting the domain into patches and routing each to a specialist model fixes that."
+  highlights:
+    - value: "0.66 → 0.80+"
+      label: "R² after 20 rollout steps, undecomposed vs. decomposed"
+    - value: "3"
+      label: "physics regimes routed to their own sub-model"
+
+- rank: 5
+  title: "TEECNet and MegaFlow2D"
+  slug: teecnet
+  url: /projects/teecnet/
+  affiliation: "CMU · Design Research Collective"
+  period: "2022 – 2025"
+  thumb: /assets/projects/teecnet/thumb.webp
+  thumb_alt: "A cylinder wake velocity field on a coarse triangular mesh, in rainbow colours, with the mesh edges visible."
+  tagline: "Instead of learning the expensive simulation's answer, learn how wrong the cheap one is — then subtract."
+  highlights:
+    - value: "30"
+      label: "train/test resolution pairs, one architecture"
+    - value: "3.2×"
+      label: "faster than the neural-operator baseline on 12 cores"

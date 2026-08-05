@@ -1,0 +1,30 @@
+{% comment %}
+  Project card grid. Driven by _data/projects.yml.
+  Usage: {% include project-cards.html entries=some_sorted_array %}
+
+  Editorial grid on purpose — thin rules, no drop shadows, no rounded "app"
+  cards. The image does the work; the chrome stays out of the way.
+{% endcomment %}
+<div class="cards">
+  {%- for p in include.entries -%}
+  <a class="card{% if p.thumb %}{% else %} card--notext{% endif %}" href="{{ p.url }}">
+    {%- if p.thumb %}
+    <span class="card__frame">
+      <img src="{{ p.thumb }}" alt="{{ p.thumb_alt | default: p.title }}" loading="lazy" width="800" height="500">
+    </span>
+    {%- endif %}
+    <span class="card__body">
+      <span class="card__meta">{{ p.affiliation }}{% if p.period %} · {{ p.period }}{% endif %}{% if p.status %} · <span class="card__status">{{ p.status }}</span>{% endif %}</span>
+      <span class="card__title">{{ p.title }}</span>
+      <span class="card__tagline">{{ p.tagline }}</span>
+      {%- if p.highlights %}
+      <span class="card__stats">
+        {%- for h in p.highlights -%}
+        <span class="stat"><span class="stat__value">{{ h.value }}</span><span class="stat__label">{{ h.label }}</span></span>
+        {%- endfor -%}
+      </span>
+      {%- endif %}
+    </span>
+  </a>
+  {%- endfor -%}
+</div>
