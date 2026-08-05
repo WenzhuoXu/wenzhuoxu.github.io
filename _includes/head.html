@@ -1,0 +1,42 @@
+{% comment %}
+  Overrides _includes/head.html from minimal-mistakes 4.24.0. Verbatim copy of
+  the theme's file EXCEPT the main stylesheet link, which now carries a version
+  query string.
+
+  Why: GitHub Pages serves /assets/css/main.css with Cache-Control max-age=14400
+  (4 hours) and the theme links it as a bare, unversioned URL. So any visitor
+  who loaded the site within the last 4 hours gets the OLD stylesheet paired
+  with NEW HTML — which renders new components as unstyled inline text. That is
+  not a hypothetical; it happened on the project-card launch.
+
+  `site.time` is the build timestamp, so every deploy mints a fresh URL and the
+  HTML and CSS can never desync again.
+
+  If the theme is ever upgraded past 4.24.0, re-copy this file from the new tag
+  and re-apply the `?v=` change.
+{% endcomment %}
+<meta charset="utf-8">
+
+{% include seo.html %}
+
+{% unless site.atom_feed.hide %}
+  <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+{% endunless %}
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+{% if site.head_scripts %}
+  {% for script in site.head_scripts %}
+    <script src="{{ script | relative_url }}"></script>
+  {% endfor %}
+{% endif %}
