@@ -19,10 +19,9 @@ The two are the same problem at different scales: the hard part is never the pre
 
 Current work, with Tong Sun. Technical reports are in preparation, so the descriptions below stay at the level of approach.
 
-### VeriPhy: agentic physical reasoning for video evaluation {#veriphy}
+### <a class="site-link" href="https://veriphy-ai.github.io/">VeriPhy: agentic physical reasoning for video evaluation</a> {#veriphy}
 
 <span class="status">technical report in preparation</span>
-<a class="site-link" href="https://veriphy-ai.github.io/">veriphy-ai.github.io &rarr;</a>
 
 Video generation models are usually scored with a single number, which tells you a clip is bad without telling you what is wrong with it. VeriPhy reframes evaluation as an **auditable verdict** rather than a score.
 

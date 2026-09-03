@@ -306,29 +306,27 @@ $size-small: 0.82rem;
   white-space: nowrap;
 }
 
-// --- Prominent project-site link, sits beside the status pill -------------
+// --- Section heading that links out to the project's own site -------------
+// The heading keeps heading colour so it still reads as a heading; the arrow
+// carries the affordance, and colour + underline arrive on hover. The arrow is
+// a ::after rather than markup on purpose — the theme builds its TOC with
+// sanitize=true (strip_html), which would otherwise leave a bare arrow
+// character sitting in the sidebar entry.
 .site-link {
-  display: inline-block;
-  margin-left: 0.4em;
-  font-size: $size-small;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: $background-color;
-  background: $primary-color;
-  border: 1px solid $primary-color;
-  border-radius: 2px;
-  padding: 0.05em 0.55em;
-  vertical-align: middle;
-  white-space: nowrap;
+  color: $text-color;
   text-decoration: none;
+
+  &::after {
+    content: " a097";
+    color: $primary-color;
+    font-weight: 400;
+  }
 
   &:hover,
   &:focus {
-    background: $link-color-hover;
-    border-color: $link-color-hover;
-    color: $background-color;
-    text-decoration: none;
+    color: $primary-color;
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 }
 
