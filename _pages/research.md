@@ -17,8 +17,6 @@ The two are the same problem at different scales: the hard part is never the pre
 
 ## Agentic systems for physical reasoning
 
-Current work, with Tong Sun. Technical reports are in preparation, so the descriptions below stay at the level of approach.
-
 ### <a class="site-link" href="https://veriphy-ai.github.io/">VeriPhy: agentic physical reasoning for video evaluation</a> {#veriphy}
 
 <span class="status">technical report in preparation</span>
