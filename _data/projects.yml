@@ -8,9 +8,8 @@
 
 - rank: 1
   title: "Agentic physical reasoning for video evaluation"
-  slug: phyreact
-  url: /research/#phyreact
-  affiliation: "Adobe Research"
+  slug: veriphy
+  url: /research/#veriphy
   period: "2026"
   status: "report in preparation"
   tagline: "Video generators are scored with one opaque number. This turns the score into an auditable verdict you can trace back to a measurement."
@@ -19,7 +18,6 @@
   title: "Executable physics from static documents"
   slug: still-life
   url: /research/#still-life
-  affiliation: "Adobe Research"
   period: "2026"
   status: "ongoing"
   tagline: "The physics printed in a textbook is inert. This reads the equations and the prose around them and compiles a simulation you can actually run."

@@ -14,7 +14,7 @@
     </span>
     {%- endif %}
     <span class="card__body">
-      <span class="card__meta">{{ p.affiliation }}{% if p.period %} · {{ p.period }}{% endif %}{% if p.status %} · <span class="card__status">{{ p.status }}</span>{% endif %}</span>
+      <span class="card__meta">{{ p.affiliation }}{% if p.period %}{% if p.affiliation %} · {% endif %}{{ p.period }}{% endif %}{% if p.status %}{% if p.affiliation or p.period %} · {% endif %}<span class="card__status">{{ p.status }}</span>{% endif %}</span>
       <span class="card__title">{{ p.title }}</span>
       <span class="card__tagline">{{ p.tagline }}</span>
       {%- if p.highlights %}

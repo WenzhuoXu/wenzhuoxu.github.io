@@ -30,7 +30,7 @@ share: false
 
 *May 2026 – present · with Tong Sun and Jiuxiang Gu*
 
-- **[PhyReAct](/research/#phyreact)** — agentic physical reasoning for video evaluation. Core contributor; technical report in preparation.
+- **[VeriPhy](/research/#veriphy)** — agentic physical reasoning for video evaluation. Core contributor; technical report in preparation.
 - **[Project Still Life](/research/#still-life)** — executable physics from static documents. Core contributor.
 
 ### Graduate Research Assistant — Carnegie Mellon University

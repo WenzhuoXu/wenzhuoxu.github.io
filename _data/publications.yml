@@ -136,13 +136,13 @@
     - label: "HuggingFace"
       url: "https://huggingface.co/collections/adopd/thinking-with-anchors"
 
-- id: phyreact
+- id: veriphy
   type: report
-  title: "PhyReAct: Agentic Physical Reasoning for Video Evaluation"
+  title: "VeriPhy: Agentic Physical Reasoning for Video Evaluation"
   authors: "Adobe Research — core contributor"
   venue: "Technical report"
   status: "in preparation"
   takeaway: "Reframes video evaluation from one opaque quality score into an auditable verdict: the generation prompt is compiled into typed physical obligations and a measurement plan, frozen perception operators return only measurements, and deterministic rules compose them into supported / contradicted / unknown with full provenance."
   links:
     - label: "Project"
-      url: "/research/#phyreact"
+      url: "/research/#veriphy"

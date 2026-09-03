@@ -11,19 +11,19 @@ read_time: false
 share: false
 ---
 
-I work on making a model's claims about a physical system *checkable*. That has taken two forms. At Adobe Research I build agentic systems that take a claim about a physical process — a generated video should obey gravity, a document's equations should close — and reduce it to measurements a person can audit. At CMU I build learned surrogates for large-scale simulation, where "checkable" means agreeing with a solver on meshes far larger than anything the model was trained on.
+I work on making a model's claims about a physical system *checkable*. That has taken two forms. In one, I build agentic systems that take a claim about a physical process — a generated video should obey gravity, a document's equations should close — and reduce it to measurements a person can audit. In the other, at CMU, I build learned surrogates for large-scale simulation, where "checkable" means agreeing with a solver on meshes far larger than anything the model was trained on.
 
 The two are the same problem at different scales: the hard part is never the prediction, it is knowing when to believe it.
 
 ## Agentic systems for physical reasoning
 
-Current work at Adobe Research, with [Tong Sun](https://research.adobe.com/person/tong-sun/) and [Jiuxiang Gu](https://gujiuxiang.com/). Technical reports are in preparation, so the descriptions below stay at the level of approach.
+Current work, with Tong Sun. Technical reports are in preparation, so the descriptions below stay at the level of approach.
 
-### PhyReAct: agentic physical reasoning for video evaluation {#phyreact}
+### VeriPhy: agentic physical reasoning for video evaluation {#veriphy}
 
 <span class="status">technical report in preparation</span>
 
-Video generation models are usually scored with a single number, which tells you a clip is bad without telling you what is wrong with it. PhyReAct reframes evaluation as an **auditable verdict** rather than a score.
+Video generation models are usually scored with a single number, which tells you a clip is bad without telling you what is wrong with it. VeriPhy reframes evaluation as an **auditable verdict** rather than a score.
 
 A reasoning model compiles the generation prompt into typed physical obligations — the specific commitments the clip has to honour — together with an executable measurement plan. A library of frozen perception operators executes that plan and returns *only measurements*, never judgements. Deterministic rules then compose those measurements into a verdict of **supported**, **contradicted**, or **unknown**, with provenance back to the operator call and time span that produced it. Because "unknown" is a first-class outcome, the system can decline to rule instead of guessing.
 
@@ -34,8 +34,11 @@ Two design commitments do most of the work:
 
 Anchoring the work is a human-annotated flaw benchmark in which each record quotes the exact violated fragment of the prompt, with a rationale, a severity, a time span, and the object track it applies to. That per-claim structure is what makes miss attribution possible at all — a clip-level score can tell you that you were wrong, but not which obligation you failed to check.
 
+[Project site](https://veriphy-ai.github.io/)
+{: .inline-links}
+
 {% comment %}
-  Quantitative results held back pending Adobe disclosure review. To publish,
+  Quantitative results held back pending disclosure review. To publish,
   clear these figures and fold them back into the text above:
     - benchmark scale: 1,500 clips, 2,582 human flaw records
     - plan-based execution recovered 179 of 295 localized flaws (60.7%) vs.
@@ -65,8 +68,8 @@ Two pieces support it:
 The end-to-end demonstration is an interactive reading experience: click any figure in a chapter and get a playable simulation with what-if controls, with the chapter's own photograph animated by depth-conditioned video generation.
 
 {% comment %}
-  Held back pending Adobe disclosure review (Liquid comment, not HTML — see the
-  note in the PhyReAct section above):
+  Held back pending disclosure review (Liquid comment, not HTML — see the
+  note in the VeriPhy section above):
     - benchmark name (FCR-Bench); assertion stack (SymPy, pint)
     - testbed: MuJoCo depth control into Wan 2.2 VACE, 1,314 scenes across
       66 kinds; five levels of query noise
