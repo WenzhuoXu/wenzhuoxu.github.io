@@ -22,6 +22,7 @@ Current work, with Tong Sun. Technical reports are in preparation, so the descri
 ### VeriPhy: agentic physical reasoning for video evaluation {#veriphy}
 
 <span class="status">technical report in preparation</span>
+<a class="site-link" href="https://veriphy-ai.github.io/">veriphy-ai.github.io &rarr;</a>
 
 Video generation models are usually scored with a single number, which tells you a clip is bad without telling you what is wrong with it. VeriPhy reframes evaluation as an **auditable verdict** rather than a score.
 
@@ -33,9 +34,6 @@ Two design commitments do most of the work:
 - **The agent improves by editing a readable state, not by updating weights.** An improvement is a diff to an operator library, a set of distilled plans, failure priors, and a gated external-knowledge channel — something a person can read, review, version, and revert. A candidate edit is accepted only when it improves a held-out score; outside knowledge enters through the same gate, so the loop cannot feed on its own output; and evidence is tagged separately from belief, so a distilled prior is never mistaken for a measurement.
 
 Anchoring the work is a human-annotated flaw benchmark in which each record quotes the exact violated fragment of the prompt, with a rationale, a severity, a time span, and the object track it applies to. That per-claim structure is what makes miss attribution possible at all — a clip-level score can tell you that you were wrong, but not which obligation you failed to check.
-
-[Project site](https://veriphy-ai.github.io/)
-{: .inline-links}
 
 {% comment %}
   Quantitative results held back pending disclosure review. To publish,

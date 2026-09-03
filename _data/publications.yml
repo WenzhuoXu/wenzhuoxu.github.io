@@ -146,3 +146,5 @@
   links:
     - label: "Project"
       url: "/research/#veriphy"
+    - label: "Site"
+      url: "https://veriphy-ai.github.io/"

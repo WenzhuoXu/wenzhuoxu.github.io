@@ -306,6 +306,32 @@ $size-small: 0.82rem;
   white-space: nowrap;
 }
 
+// --- Prominent project-site link, sits beside the status pill -------------
+.site-link {
+  display: inline-block;
+  margin-left: 0.4em;
+  font-size: $size-small;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $background-color;
+  background: $primary-color;
+  border: 1px solid $primary-color;
+  border-radius: 2px;
+  padding: 0.05em 0.55em;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background: $link-color-hover;
+    border-color: $link-color-hover;
+    color: $background-color;
+    text-decoration: none;
+  }
+}
+
 // --- Inline "Paper · Code · Talk" menus under a project -------------------
 .inline-links {
   font-size: $size-small !important;
