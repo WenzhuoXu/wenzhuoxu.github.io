@@ -7,11 +7,11 @@
 # Do not add one you cannot point at.
 
 - rank: 1
-  title: "Agentic physical reasoning for video evaluation"
+  title: "Agentic physical reasoning for world model evaluation"
   slug: veriphy
   url: /research/#veriphy
   period: "2026"
-  status: "report in preparation"
+  status: "arXiv:2609.03153"
   tagline: "Video generators are scored with one opaque number. This turns the score into an auditable verdict you can trace back to a measurement."
 
 - rank: 2
