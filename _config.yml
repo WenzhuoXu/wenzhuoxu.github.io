@@ -3,10 +3,10 @@ title: Wenzhuo Xu
 subtitle: Ph.D. Candidate, Carnegie Mellon University
 email: wzxu@cmu.edu
 description: >-
-  Wenzhuo Xu is a Ph.D. candidate at Carnegie Mellon University and a Research
-  Scientist Intern at Adobe Research, working on agentic and vision-language
-  systems for physical reasoning, and on machine learning for large-scale
-  physical simulation.
+  Wenzhuo Xu is a Ph.D. candidate at Carnegie Mellon University, previously a
+  Research Scientist Intern at Adobe Research, working on agentic and
+  vision-language systems for physical reasoning, and on machine learning for
+  large-scale physical simulation.
 baseurl: ""
 url: "https://wenzhuoxu.com"
 # jekyll-github-metadata (pulled in by the github-pages gem) needs the repo name
@@ -48,7 +48,7 @@ include:
 author:
   name   : "Wenzhuo Xu"
   avatar : "/assets/images/self_image.jpg"
-  bio    : "Ph.D. candidate at Carnegie Mellon University. Research Scientist Intern at Adobe Research."
+  bio    : "Ph.D. candidate at Carnegie Mellon University. Previously a Research Scientist Intern at Adobe Research."
   location: "Pittsburgh, PA"
   links:
     - label: "Email"

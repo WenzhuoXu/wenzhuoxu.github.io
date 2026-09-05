@@ -17,14 +17,14 @@ related: false
 {% endcomment %}
 <h1 class="screen-reader-text">Wenzhuo Xu</h1>
 
-I build agentic and vision–language systems that reason about physical processes — how they behave, and whether a generated video or the equations printed in a document actually respect them. I am a Ph.D. candidate in Mechanical Engineering at Carnegie Mellon University (expected May 2027) and currently a Research Scientist Intern at Adobe Research. My background is in learned surrogates and neural operators for large-scale fluid simulation, which is where the physics grounding comes from: I spent four years building models that had to agree with a solver, and I now build systems that have to agree with the world.
+I build agentic and vision–language systems that reason about physical processes — how they behave, and whether a generated video or the equations printed in a document actually respect them. I am a Ph.D. candidate in Mechanical Engineering at Carnegie Mellon University (expected May 2027), and I spent summer 2026 as a Research Scientist Intern at Adobe Research. My background is in learned surrogates and neural operators for large-scale fluid simulation, which is where the physics grounding comes from: I spent four years building models that had to agree with a solver, and I now build systems that have to agree with the world.
 
 The thread through both halves is the same — a model's claim about a physical system should be checkable, and the machinery that checks it should be something a person can read.
 
-**Adobe Research** — Research Scientist Intern, with [Tong Sun](https://research.adobe.com/person/tong-sun/) and [Jiuxiang Gu](https://gujiuxiang.com/)
+**Carnegie Mellon University** — advised by [Christopher McComb](https://engineering.cmu.edu/directory/bios/mccomb-christopher.html) and [Noelia Grande Gutiérrez](https://www.meche.engineering.cmu.edu/directory/bios/grande-gutierrez-noelia.html), [Department of Mechanical Engineering](https://www.meche.engineering.cmu.edu/index.html), [CMU](https://www.cmu.edu/)
 {: .affiliations}
 
-**Carnegie Mellon University** — advised by [Christopher McComb](https://engineering.cmu.edu/directory/bios/mccomb-christopher.html) and [Noelia Grande Gutiérrez](https://www.meche.engineering.cmu.edu/directory/bios/grande-gutierrez-noelia.html), [Department of Mechanical Engineering](https://www.meche.engineering.cmu.edu/index.html), [CMU](https://www.cmu.edu/)
+**Adobe Research** — Research Scientist Intern, summer 2026, with [Tong Sun](https://research.adobe.com/person/tong-sun/) and [Jiuxiang Gu](https://gujiuxiang.com/)
 {: .affiliations}
 
 **Labs** — [Design Research Collective](https://cmudrc.github.io/) · [BioSiMMlab](https://www.meche.engineering.cmu.edu/faculty/gutierrez-biosimm-lab.html)
