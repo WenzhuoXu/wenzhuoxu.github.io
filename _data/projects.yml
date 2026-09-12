@@ -12,6 +12,8 @@
   url: /research/#veriphy
   period: "2026"
   status: "arXiv:2609.03153"
+  thumb: /assets/projects/veriphy/thumb.webp
+  thumb_alt: "Two stills from the same beach-frisbee prompt at 5.6 seconds, side by side. In the baseline clip the frisbee has turned into a red ball hovering above the water; after VeriPhy's rewrite an intact white disc rests on the wet sand."
   tagline: "Video generators are scored with one opaque number. This turns the score into an auditable verdict you can trace back to a measurement."
 
 - rank: 2
